@@ -4,11 +4,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ExamPlanner_Backend.Models
 {
-    public class ExamPlannerDbContext : IdentityDbContext<UserModel, IdentityRole<Guid>, Guid>
+    public class ExamPlannerDbContext(DbContextOptions<ExamPlannerDbContext> options) : IdentityDbContext<IdentityUser>(options)
     {
-        public ExamPlannerDbContext(DbContextOptions<ExamPlannerDbContext> options) : base(options)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            SeedRoles(modelBuilder);
+        }
 
+        private static void SeedRoles(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole { Name = "SuperAdmin", NormalizedName = "SUPERADMIN" },
+                new IdentityRole { Name = "Director", NormalizedName = "DIRECTOR" },
+                new IdentityRole { Name = "StudentAffairsService", NormalizedName = "STUDENTAFFAIRSSERVICE" },
+                new IdentityRole { Name = "PrintingService", NormalizedName = "PRINTINGSERVICE" },
+                new IdentityRole { Name = "Teacher", NormalizedName = "TEACHER" }
+            );
         }
     }
 }
