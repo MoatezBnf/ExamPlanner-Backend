@@ -22,5 +22,6 @@ namespace ExamPlanner_Backend.Models
                 new IdentityRole { Name = "Teacher", NormalizedName = "TEACHER" }
             );
         }
+        public DbSet<ExamPlanner_Backend.Models.UserModel> UserModel { get; set; } = default!;
     }
 }

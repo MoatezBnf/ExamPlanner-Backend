@@ -17,7 +17,9 @@ namespace ExamPlanner_Backend.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, IConfiguration configuration, RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager, IConfiguration configuration,
+            RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -35,14 +37,20 @@ namespace ExamPlanner_Backend.Controllers
                 return BadRequest("Role does not exist");
             }
 
+            // Check if the user exists
             var userExists = await _userManager.FindByEmailAsync(model.Email!);
             if (userExists != null)
             {
                 return BadRequest("User with this email already exists");
             }
 
+            //Add the user in the database
             var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
             var result = await _userManager.CreateAsync(user, model.Password!);
+            if (!result.Succeeded)
+            {
+                return BadRequest("Registration failed");
+            }
 
             if (result.Succeeded)
             {
@@ -70,20 +78,26 @@ namespace ExamPlanner_Backend.Controllers
 
             if (result.Succeeded)
             {
+                var roles = await _userManager.GetRolesAsync(user);
                 var claims = new List<Claim>
                 {
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(ClaimTypes.NameIdentifier, user.Id)
-                };
 
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]!));
+                };
+                foreach (var role in roles)
+                {
+                    claims.Add(new Claim(ClaimTypes.Role, role));
+                }
+
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]!));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
                 var expires = DateTime.Now.AddHours(1);
 
                 var token = new JwtSecurityToken(
-                    _configuration["Jwt:Issuer"],
-                    _configuration["Jwt:Audience"],
+                    _configuration["JWT:ValidIssuer"],
+                    _configuration["JWT:ValidAudience"],
                     claims,
                     expires: expires,
                     signingCredentials: creds
