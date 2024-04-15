@@ -1,6 +1,7 @@
 ﻿using ExamPlanner_Backend.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -12,19 +13,21 @@ namespace ExamPlanner_Backend.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ExamPlannerDbContext _context;
         private readonly IConfiguration _configuration;
 
-        public AccountController(UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager, IConfiguration configuration,
-            RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager, IConfiguration configuration,
+            RoleManager<IdentityRole> roleManager, ExamPlannerDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _configuration = configuration;
             _roleManager = roleManager;
+            _context = context;
         }
 
         [HttpPost("register")]
@@ -44,8 +47,19 @@ namespace ExamPlanner_Backend.Controllers
                 return BadRequest("User with this email already exists");
             }
 
+            // Check if the departments exist
+            if (model.DepartmentIds == null)
+            {
+                return BadRequest("Department IDs are required");
+            }
+            var departmentsExist = await _context.Departments.Where(d => model.DepartmentIds.Contains(d.DepartmentId)).ToListAsync();
+            if (departmentsExist.Count != model.DepartmentIds.Count)
+            {
+                return BadRequest("One or more departments do not exist");
+            }
+
             //Add the user in the database
-            var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
+            var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
             var result = await _userManager.CreateAsync(user, model.Password!);
             if (!result.Succeeded)
             {
@@ -56,6 +70,17 @@ namespace ExamPlanner_Backend.Controllers
             {
                 // Assign the user to a role
                 await _userManager.AddToRoleAsync(user, model.Role!);
+
+                // Add the user to the departments
+                foreach (var departmentId in model.DepartmentIds)
+                {
+                    _context.UserDepartments.Add(new UserDepartment
+                    {
+                        UserId = user.Id,
+                        DepartmentId = departmentId
+                    });
+                }
+                await _context.SaveChangesAsync();
 
                 return Ok("Registration successful");
             }

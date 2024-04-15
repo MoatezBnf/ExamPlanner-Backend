@@ -17,6 +17,9 @@ namespace ExamPlanner_Backend.Models
         [Required]
         public string? Role { get; set; }
 
+        [Required]
+        public List<int>? DepartmentIds { get; set; }
+
     }
 
 }

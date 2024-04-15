@@ -10,11 +10,16 @@ namespace ExamPlanner_Backend.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ExamPlannerDbContext _context;
 
-        public UserController(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public UserController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager,
+            ExamPlannerDbContext context)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
+            _context = context;
         }
 
         // GET: api/get-all-users
@@ -28,6 +33,10 @@ namespace ExamPlanner_Backend.Controllers
             foreach (var user in users)
             {
                 var roles = await _userManager.GetRolesAsync(user);
+                var departmentIds = _context.UserDepartments
+                    .Where(ud => ud.UserId == user.Id)
+                    .Select(ud => ud.DepartmentId)
+                    .ToList();
                 if (User.IsInRole("SuperAdmin") || (User.IsInRole("Director") && !roles.Contains("SuperAdmin") && !roles.Contains("Director")))
                 {
                     userModelList.Add(new UserModel
@@ -35,7 +44,8 @@ namespace ExamPlanner_Backend.Controllers
                         Id = user.Id,
                         UserName = user.UserName,
                         Email = user.Email,
-                        Role = roles.FirstOrDefault()
+                        Role = roles.FirstOrDefault(),
+                        DepartmentIds = departmentIds
                     });
                 }
             }
@@ -60,12 +70,18 @@ namespace ExamPlanner_Backend.Controllers
                 return NotFound(new { message = "User not found" });
             }
 
+            var departmentIds = _context.UserDepartments
+                .Where(ud => ud.UserId == user.Id)
+                .Select(ud => ud.DepartmentId)
+                .ToList();
+
             var userModel = new UserModel
             {
                 Id = user.Id,
                 UserName = user.UserName,
                 Email = user.Email,
-                Role = roles.FirstOrDefault()
+                Role = roles.FirstOrDefault(),
+                DepartmentIds = departmentIds
             };
 
             return Ok(new { message = "Success", data = userModel });
@@ -86,7 +102,14 @@ namespace ExamPlanner_Backend.Controllers
                 return BadRequest(new { message = "Director cannot create a user with SuperAdmin or Director role" });
             }
 
-            var user = new IdentityUser
+            // Check if the role exists
+            var roleExists = await _roleManager.RoleExistsAsync(registerModel.Role!);
+            if (!roleExists)
+            {
+                return BadRequest(new { message = "Role does not exist" });
+            }
+
+            var user = new ApplicationUser
             {
                 UserName = registerModel.UserName,
                 Email = registerModel.Email
@@ -103,6 +126,24 @@ namespace ExamPlanner_Backend.Controllers
             }
 
             await _userManager.AddToRoleAsync(user, registerModel.Role!);
+
+            // Check if the departments exist
+            var existingDepartmentIds = _context.Departments.Select(d => d.DepartmentId).ToList();
+            var invalidDepartmentIds = registerModel.DepartmentIds?.Except(existingDepartmentIds).ToList();
+            if (invalidDepartmentIds != null && invalidDepartmentIds.Any())
+            {
+                return BadRequest(new { message = "Invalid department IDs", invalidDepartmentIds });
+            }
+
+            foreach (var departmentId in registerModel.DepartmentIds!)
+            {
+                _context.UserDepartments.Add(new UserDepartment
+                {
+                    UserId = user.Id,
+                    DepartmentId = departmentId
+                });
+            }
+            await _context.SaveChangesAsync();
 
             return Ok(new { message = "User created successfully" });
         }
@@ -134,6 +175,13 @@ namespace ExamPlanner_Backend.Controllers
                 return BadRequest(new { message = "Director cannot assign SuperAdmin or Director role" });
             }
 
+            // Check if the role exists
+            var roleExists = await _roleManager.RoleExistsAsync(userModel.Role!);
+            if (!roleExists)
+            {
+                return BadRequest(new { message = "Role does not exist" });
+            }
+
             user.UserName = userModel.UserName;
             user.Email = userModel.Email;
 
@@ -152,6 +200,28 @@ namespace ExamPlanner_Backend.Controllers
                 await _userManager.RemoveFromRolesAsync(user, roles);
                 await _userManager.AddToRoleAsync(user, userModel.Role!);
             }
+
+            var existingUserDepartments = _context.UserDepartments
+                .Where(ud => ud.UserId == user.Id);
+            _context.UserDepartments.RemoveRange(existingUserDepartments);
+
+            // Check if the departments exist
+            var existingDepartmentIds = _context.Departments.Select(d => d.DepartmentId).ToList();
+            var invalidDepartmentIds = userModel.DepartmentIds?.Except(existingDepartmentIds).ToList();
+            if (invalidDepartmentIds != null && invalidDepartmentIds.Any())
+            {
+                return BadRequest(new { message = "Invalid department IDs", invalidDepartmentIds });
+            }
+
+            foreach (var departmentId in userModel.DepartmentIds!)
+            {
+                _context.UserDepartments.Add(new UserDepartment
+                {
+                    UserId = user.Id,
+                    DepartmentId = departmentId
+                });
+            }
+            await _context.SaveChangesAsync();
 
             return Ok(new { message = "User updated successfully" });
         }

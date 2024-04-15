@@ -46,9 +46,10 @@ builder.Services.AddDbContext<ExamPlannerDbContext>(options =>
 });
 
 // Add Identity
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ExamPlannerDbContext>()
     .AddDefaultTokenProviders();
+
 
 // Configure JWT Bearer Authentication
 builder.Services.AddAuthentication(options =>

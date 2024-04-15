@@ -4,6 +4,7 @@ using ExamPlanner_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamPlanner_Backend.Migrations
 {
     [DbContext(typeof(ExamPlannerDbContext))]
-    partial class ExamPlannerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240415102736_AddDepartmentsAndUserDepartments")]
+    partial class AddDepartmentsAndUserDepartments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
