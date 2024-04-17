@@ -25,6 +25,19 @@ namespace ExamPlanner_Backend.Models
                 .HasOne(ud => ud.Department)
                 .WithMany(d => d.UserDepartments)
                 .HasForeignKey(ud => ud.DepartmentId);
+            modelBuilder.Entity<SpecialityLevel>()
+                .HasKey(sl => new { sl.SpecialityId, sl.LevelId });
+
+            modelBuilder.Entity<SpecialityLevel>()
+                .HasOne(sl => sl.Speciality)
+                .WithMany(s => s.SpecialityLevels)
+                .HasForeignKey(sl => sl.SpecialityId);
+
+            modelBuilder.Entity<SpecialityLevel>()
+                .HasOne(sl => sl.Level)
+                .WithMany(l => l.SpecialityLevels)
+                .HasForeignKey(sl => sl.LevelId);
+
 
         }
 
@@ -51,6 +64,13 @@ namespace ExamPlanner_Backend.Models
         public DbSet<UserModel> UserModel { get; set; } = default!;
         public DbSet<Department> Departments { get; set; }
         public DbSet<UserDepartment> UserDepartments { get; set; }
-
+        public DbSet<Speciality> Specialities { get; set; }
+        public DbSet<Level> Levels { get; set; }
+        public DbSet<SpecialityLevel> SpecialityLevels { get; set; }
+        public DbSet<Class> Classes { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Exam> Exams { get; set; }
     }
 }
