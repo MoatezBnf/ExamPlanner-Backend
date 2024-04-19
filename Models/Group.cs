@@ -2,10 +2,10 @@
 {
     public class Group
     {
-        public int? GroupId { get; set; }
+        public int GroupId { get; set; }
         public string? Name { get; set; }
-        public int? ClassId { get; set; }
-        public int? RoomId { get; set; }
+        public int ClassId { get; set; }
+        public int RoomId { get; set; }
 
         public Class? Class { get; set; }
         public Room? Room { get; set; }

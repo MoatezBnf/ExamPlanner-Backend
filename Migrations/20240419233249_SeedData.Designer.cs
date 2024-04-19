@@ -4,6 +4,7 @@ using ExamPlanner_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamPlanner_Backend.Migrations
 {
     [DbContext(typeof(ExamPlannerDbContext))]
-    partial class ExamPlannerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240419233249_SeedData")]
+    partial class SeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -814,7 +817,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 1,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(8927),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(4927),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 1",
@@ -823,7 +826,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 2,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9020),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5004),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 2",
@@ -832,7 +835,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 3,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9041),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5029),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 3",
@@ -841,7 +844,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 4,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9064),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5050),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 4",
@@ -850,7 +853,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 5,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9085),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5109),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 5",
@@ -859,7 +862,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 6,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9109),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5136),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 6",
@@ -868,7 +871,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 7,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9132),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5160),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 7",
@@ -877,7 +880,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 8,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9155),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5183),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 8",
@@ -886,7 +889,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 9,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9177),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5205),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 9",
@@ -895,7 +898,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 10,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9201),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5231),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 10",
@@ -904,7 +907,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 11,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9223),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5256),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 11",
@@ -913,7 +916,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 12,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9246),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5278),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 12",
@@ -922,7 +925,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 13,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9268),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5302),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 13",
@@ -931,7 +934,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 14,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9290),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5324),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 14",
@@ -940,7 +943,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 15,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9312),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5346),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 15",
@@ -949,7 +952,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 16,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9335),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5369),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 16",
@@ -958,7 +961,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 17,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9356),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5393),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 17",
@@ -967,7 +970,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 18,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9422),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5416),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 18",
@@ -976,7 +979,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 19,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9449),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5439),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 19",
@@ -985,7 +988,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 20,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9471),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5464),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 20",
@@ -994,7 +997,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 21,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9493),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5489),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 21",
@@ -1003,7 +1006,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 22,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9517),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5511),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 22",
@@ -1012,7 +1015,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 23,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9539),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5534),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 23",
@@ -1021,7 +1024,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 24,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9561),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5556),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 24",
@@ -1030,7 +1033,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 25,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9582),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5580),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 25",
@@ -1039,7 +1042,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 26,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9603),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5603),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 26",
@@ -1048,7 +1051,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 27,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9624),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5626),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 27",
@@ -1057,7 +1060,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 28,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9644),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5684),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 28",
@@ -1066,7 +1069,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 29,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9667),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5710),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 29",
@@ -1075,7 +1078,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 30,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9689),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5735),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 30",
@@ -1084,7 +1087,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 31,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9712),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5760),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 31",
@@ -1093,7 +1096,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 32,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9735),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5783),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 32",
@@ -1102,7 +1105,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 33,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9757),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5808),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 33",
@@ -1111,7 +1114,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 34,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9780),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5834),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 34",
@@ -1120,7 +1123,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 35,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9804),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5857),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 35",
@@ -1129,7 +1132,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 36,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9826),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5882),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 36",
@@ -1138,7 +1141,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 37,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9848),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5907),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 37",
@@ -1147,7 +1150,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 38,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9869),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5929),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 38",
@@ -1156,7 +1159,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 39,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9890),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5952),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 39",
@@ -1165,7 +1168,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 40,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9915),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(5977),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 40",
@@ -1174,7 +1177,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 41,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9937),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6004),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 41",
@@ -1183,7 +1186,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 42,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 928, DateTimeKind.Local).AddTicks(9985),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6028),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 42",
@@ -1192,7 +1195,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 43,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(7),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6051),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 43",
@@ -1201,7 +1204,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 44,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(28),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6074),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 44",
@@ -1210,7 +1213,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 45,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(49),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6099),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 45",
@@ -1219,7 +1222,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 46,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(71),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6121),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 46",
@@ -1228,7 +1231,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 47,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(91),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6144),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 47",
@@ -1237,7 +1240,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 48,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(113),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6166),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 48",
@@ -1246,7 +1249,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 49,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(136),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6189),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 49",
@@ -1255,7 +1258,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 50,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(159),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6210),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 50",
@@ -1264,7 +1267,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 51,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(180),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6265),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 51",
@@ -1273,7 +1276,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 52,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(202),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6292),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 52",
@@ -1282,7 +1285,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 53,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(224),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6316),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 53",
@@ -1291,7 +1294,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 54,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(246),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6340),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 54",
@@ -1300,7 +1303,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 55,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(268),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6364),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 55",
@@ -1309,7 +1312,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 56,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(290),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6386),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 56",
@@ -1318,7 +1321,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 57,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(312),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6410),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 57",
@@ -1327,7 +1330,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 58,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(334),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6432),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 58",
@@ -1336,7 +1339,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 59,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(355),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6455),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 59",
@@ -1345,7 +1348,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 60,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(376),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6478),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 60",
@@ -1354,7 +1357,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 61,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(398),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6501),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 61",
@@ -1363,7 +1366,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 62,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(423),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6526),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 62",
@@ -1372,7 +1375,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 63,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(445),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6550),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 63",
@@ -1381,7 +1384,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 64,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(467),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6572),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 64",
@@ -1390,7 +1393,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 65,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(488),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6595),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 65",
@@ -1399,7 +1402,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 66,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(570),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6620),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 66",
@@ -1408,7 +1411,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 67,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(595),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6643),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 67",
@@ -1417,7 +1420,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 68,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(616),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6667),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 68",
@@ -1426,7 +1429,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 69,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(639),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6690),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 69",
@@ -1435,7 +1438,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 70,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(661),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6713),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 70",
@@ -1444,7 +1447,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 71,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(684),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6735),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 71",
@@ -1453,7 +1456,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 72,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(707),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6758),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 72",
@@ -1462,7 +1465,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 73,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(729),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6803),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 73",
@@ -1471,7 +1474,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 74,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(749),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6827),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 74",
@@ -1480,7 +1483,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 75,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(771),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6851),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 75",
@@ -1489,7 +1492,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 76,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(793),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6876),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 76",
@@ -1498,7 +1501,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 77,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(816),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6900),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 77",
@@ -1507,7 +1510,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 78,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(837),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6924),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 78",
@@ -1516,7 +1519,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 79,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(860),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6947),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 79",
@@ -1525,7 +1528,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 80,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(882),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6968),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 80",
@@ -1534,7 +1537,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 81,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(904),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(6991),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 81",
@@ -1543,7 +1546,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 82,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(926),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7015),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 82",
@@ -1552,7 +1555,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 83,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(947),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7039),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 83",
@@ -1561,7 +1564,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 84,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(969),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7062),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 84",
@@ -1570,7 +1573,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 85,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(990),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7085),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 85",
@@ -1579,7 +1582,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 86,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1011),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7108),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 86",
@@ -1588,7 +1591,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 87,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1032),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7131),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 87",
@@ -1597,7 +1600,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 88,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1118),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7151),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 88",
@@ -1606,7 +1609,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 89,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1140),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7173),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 89",
@@ -1615,7 +1618,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 90,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1164),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7195),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 90",
@@ -1624,7 +1627,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 91,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1188),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7218),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 91",
@@ -1633,7 +1636,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 92,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1209),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7240),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 92",
@@ -1642,7 +1645,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 93,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1231),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7262),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 93",
@@ -1651,7 +1654,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 94,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1253),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7285),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 94",
@@ -1660,7 +1663,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 95,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1274),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7307),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 95",
@@ -1669,7 +1672,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 96,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1297),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7331),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 96",
@@ -1678,7 +1681,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 97,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1318),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7405),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 97",
@@ -1687,7 +1690,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 98,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1339),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7432),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 98",
@@ -1696,7 +1699,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 99,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1361),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7456),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 99",
@@ -1705,7 +1708,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 100,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1383),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7480),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 100",
@@ -1714,7 +1717,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 101,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1407),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7503),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 101",
@@ -1723,7 +1726,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 102,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1430),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7526),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 102",
@@ -1732,7 +1735,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 103,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1451),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7549),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 103",
@@ -1741,7 +1744,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 104,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1473),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7573),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 104",
@@ -1750,7 +1753,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 105,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1495),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7597),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 105",
@@ -1759,7 +1762,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 106,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1516),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7622),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 106",
@@ -1768,7 +1771,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 107,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1538),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7645),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 107",
@@ -1777,7 +1780,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 108,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1560),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7669),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 108",
@@ -1786,7 +1789,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 109,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1581),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7690),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 109",
@@ -1795,7 +1798,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 110,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1603),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7713),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 110",
@@ -1804,7 +1807,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 111,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1623),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7736),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 111",
@@ -1813,7 +1816,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 112,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1645),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7758),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 112",
@@ -1822,7 +1825,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 113,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1715),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7781),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 113",
@@ -1831,7 +1834,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 114,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1739),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7806),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 114",
@@ -1840,7 +1843,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 115,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1763),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7830),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 115",
@@ -1849,7 +1852,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 116,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1785),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7853),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 116",
@@ -1858,7 +1861,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 117,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1806),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7876),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 117",
@@ -1867,7 +1870,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 118,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1829),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7898),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 118",
@@ -1876,7 +1879,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 119,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1852),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(7988),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 119",
@@ -1885,7 +1888,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 120,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1874),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8014),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 120",
@@ -1894,7 +1897,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 121,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1897),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8039),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 121",
@@ -1903,7 +1906,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 122,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1919),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8120),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 122",
@@ -1912,7 +1915,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 123,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1939),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8145),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 123",
@@ -1921,7 +1924,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 124,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1961),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8168),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 124",
@@ -1930,7 +1933,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 125,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(1983),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8194),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 125",
@@ -1939,7 +1942,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 126,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(2004),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8218),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 126",
@@ -1948,7 +1951,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 127,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(2025),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8239),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 127",
@@ -1957,7 +1960,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 128,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3420),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8262),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 128",
@@ -1966,7 +1969,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 129,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3564),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8286),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 129",
@@ -1975,7 +1978,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 130,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3609),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8311),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 130",
@@ -1984,7 +1987,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 131,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3634),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8335),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 131",
@@ -1993,7 +1996,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 132,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3804),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8358),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 132",
@@ -2002,7 +2005,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 133,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3827),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8379),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 133",
@@ -2011,7 +2014,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 134,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3851),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8403),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 134",
@@ -2020,7 +2023,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 135,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3872),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8425),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 135",
@@ -2029,7 +2032,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 136,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3894),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8447),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 136",
@@ -2038,7 +2041,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 137,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3917),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8470),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 137",
@@ -2047,7 +2050,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 138,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3940),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8493),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 138",
@@ -2056,7 +2059,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 139,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3962),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8517),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 139",
@@ -2065,7 +2068,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 140,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(3982),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8539),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 1,
                             Name = "Exam 140",
@@ -2074,7 +2077,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 141,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4004),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8600),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 141",
@@ -2083,7 +2086,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 142,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4026),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8625),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 142",
@@ -2092,7 +2095,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 143,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4048),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8649),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 143",
@@ -2101,7 +2104,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 144,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4070),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8673),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 144",
@@ -2110,7 +2113,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 145,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4093),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8698),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 2,
                             Name = "Exam 145",
@@ -2119,7 +2122,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 146,
-                            Date = new DateTime(2024, 4, 21, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4115),
+                            Date = new DateTime(2024, 4, 21, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8721),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 146",
@@ -2128,7 +2131,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 147,
-                            Date = new DateTime(2024, 4, 22, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4136),
+                            Date = new DateTime(2024, 4, 22, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8745),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 147",
@@ -2137,7 +2140,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 148,
-                            Date = new DateTime(2024, 4, 23, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4158),
+                            Date = new DateTime(2024, 4, 23, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8766),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 148",
@@ -2146,7 +2149,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 149,
-                            Date = new DateTime(2024, 4, 24, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4179),
+                            Date = new DateTime(2024, 4, 24, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8788),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 149",
@@ -2155,7 +2158,7 @@ namespace ExamPlanner_Backend.Migrations
                         new
                         {
                             ExamId = 150,
-                            Date = new DateTime(2024, 4, 25, 0, 46, 59, 929, DateTimeKind.Local).AddTicks(4200),
+                            Date = new DateTime(2024, 4, 25, 0, 32, 46, 943, DateTimeKind.Local).AddTicks(8812),
                             Duration = new TimeSpan(0, 2, 0, 0, 0),
                             LevelId = 3,
                             Name = "Exam 150",
@@ -2194,1260 +2197,1260 @@ namespace ExamPlanner_Backend.Migrations
                             GroupId = 1,
                             ClassId = 1,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 2,
                             ClassId = 1,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 3,
                             ClassId = 2,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 4,
                             ClassId = 2,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 5,
                             ClassId = 3,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 6,
                             ClassId = 3,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 7,
                             ClassId = 4,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 8,
                             ClassId = 4,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 9,
                             ClassId = 5,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 10,
                             ClassId = 5,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 11,
                             ClassId = 6,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 12,
                             ClassId = 6,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 13,
                             ClassId = 7,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 14,
                             ClassId = 7,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 15,
                             ClassId = 8,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 16,
                             ClassId = 8,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 17,
                             ClassId = 9,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 18,
                             ClassId = 9,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 19,
                             ClassId = 10,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 20,
                             ClassId = 10,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 21,
                             ClassId = 11,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 22,
                             ClassId = 11,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 23,
                             ClassId = 12,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 24,
                             ClassId = 12,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 25,
                             ClassId = 13,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 26,
                             ClassId = 13,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 27,
                             ClassId = 14,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 28,
                             ClassId = 14,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 29,
                             ClassId = 15,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 30,
                             ClassId = 15,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 31,
                             ClassId = 16,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 32,
                             ClassId = 16,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 33,
                             ClassId = 17,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 34,
                             ClassId = 17,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 35,
                             ClassId = 18,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 36,
                             ClassId = 18,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 37,
                             ClassId = 19,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 38,
                             ClassId = 19,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 39,
                             ClassId = 20,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 40,
                             ClassId = 20,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 41,
                             ClassId = 21,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 42,
                             ClassId = 21,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 43,
                             ClassId = 22,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 44,
                             ClassId = 22,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 45,
                             ClassId = 23,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 46,
                             ClassId = 23,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 47,
                             ClassId = 24,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 48,
                             ClassId = 24,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 49,
                             ClassId = 25,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 50,
                             ClassId = 25,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 51,
                             ClassId = 26,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 52,
                             ClassId = 26,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 53,
                             ClassId = 27,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 54,
                             ClassId = 27,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 55,
                             ClassId = 28,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 56,
                             ClassId = 28,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 57,
                             ClassId = 29,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 58,
                             ClassId = 29,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 59,
                             ClassId = 30,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 60,
                             ClassId = 30,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 61,
                             ClassId = 31,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 62,
                             ClassId = 31,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 63,
                             ClassId = 32,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 64,
                             ClassId = 32,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 65,
                             ClassId = 33,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 66,
                             ClassId = 33,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 67,
                             ClassId = 34,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 68,
                             ClassId = 34,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 69,
                             ClassId = 35,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 70,
                             ClassId = 35,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 71,
                             ClassId = 36,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 72,
                             ClassId = 36,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 73,
                             ClassId = 37,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 74,
                             ClassId = 37,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 75,
                             ClassId = 38,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 76,
                             ClassId = 38,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 77,
                             ClassId = 39,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 78,
                             ClassId = 39,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 79,
                             ClassId = 40,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 80,
                             ClassId = 40,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 81,
                             ClassId = 41,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 82,
                             ClassId = 41,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 83,
                             ClassId = 42,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 84,
                             ClassId = 42,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 85,
                             ClassId = 43,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 86,
                             ClassId = 43,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 87,
                             ClassId = 44,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 88,
                             ClassId = 44,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 89,
                             ClassId = 45,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 90,
                             ClassId = 45,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 91,
                             ClassId = 46,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 92,
                             ClassId = 46,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 93,
                             ClassId = 47,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 94,
                             ClassId = 47,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 95,
                             ClassId = 48,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 96,
                             ClassId = 48,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 97,
                             ClassId = 49,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 98,
                             ClassId = 49,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 99,
                             ClassId = 50,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 100,
                             ClassId = 50,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 101,
                             ClassId = 51,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 102,
                             ClassId = 51,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 103,
                             ClassId = 52,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 104,
                             ClassId = 52,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 105,
                             ClassId = 53,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 106,
                             ClassId = 53,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 107,
                             ClassId = 54,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 108,
                             ClassId = 54,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 109,
                             ClassId = 55,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 110,
                             ClassId = 55,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 111,
                             ClassId = 56,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 112,
                             ClassId = 56,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 113,
                             ClassId = 57,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 114,
                             ClassId = 57,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 115,
                             ClassId = 58,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 116,
                             ClassId = 58,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 117,
                             ClassId = 59,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 118,
                             ClassId = 59,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 119,
                             ClassId = 60,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 120,
                             ClassId = 60,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 121,
                             ClassId = 61,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 122,
                             ClassId = 61,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 123,
                             ClassId = 62,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 124,
                             ClassId = 62,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 125,
                             ClassId = 63,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 126,
                             ClassId = 63,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 127,
                             ClassId = 64,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 128,
                             ClassId = 64,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 129,
                             ClassId = 65,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 130,
                             ClassId = 65,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 131,
                             ClassId = 66,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 132,
                             ClassId = 66,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 133,
                             ClassId = 67,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 134,
                             ClassId = 67,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 135,
                             ClassId = 68,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 136,
                             ClassId = 68,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 137,
                             ClassId = 69,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 138,
                             ClassId = 69,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 139,
                             ClassId = 70,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 140,
                             ClassId = 70,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 141,
                             ClassId = 71,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 142,
                             ClassId = 71,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 143,
                             ClassId = 72,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 144,
                             ClassId = 72,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 145,
                             ClassId = 73,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 146,
                             ClassId = 73,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 147,
                             ClassId = 74,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 148,
                             ClassId = 74,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 149,
                             ClassId = 75,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 150,
                             ClassId = 75,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 151,
                             ClassId = 76,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 152,
                             ClassId = 76,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 153,
                             ClassId = 77,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 154,
                             ClassId = 77,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 155,
                             ClassId = 78,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 156,
                             ClassId = 78,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 157,
                             ClassId = 79,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 158,
                             ClassId = 79,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 159,
                             ClassId = 80,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 160,
                             ClassId = 80,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 161,
                             ClassId = 81,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 162,
                             ClassId = 81,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 163,
                             ClassId = 82,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 164,
                             ClassId = 82,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 165,
                             ClassId = 83,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 166,
                             ClassId = 83,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 167,
                             ClassId = 84,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 168,
                             ClassId = 84,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         },
                         new
                         {
                             GroupId = 169,
                             ClassId = 85,
                             Name = "Group 1",
-                            RoomId = 1
+                            RoomId = 2
                         },
                         new
                         {
                             GroupId = 170,
                             ClassId = 85,
                             Name = "Group 2",
-                            RoomId = 2
+                            RoomId = 3
                         },
                         new
                         {
                             GroupId = 171,
                             ClassId = 86,
                             Name = "Group 1",
-                            RoomId = 3
+                            RoomId = 4
                         },
                         new
                         {
                             GroupId = 172,
                             ClassId = 86,
                             Name = "Group 2",
-                            RoomId = 4
+                            RoomId = 5
                         },
                         new
                         {
                             GroupId = 173,
                             ClassId = 87,
                             Name = "Group 1",
-                            RoomId = 5
+                            RoomId = 6
                         },
                         new
                         {
                             GroupId = 174,
                             ClassId = 87,
                             Name = "Group 2",
-                            RoomId = 6
+                            RoomId = 7
                         },
                         new
                         {
                             GroupId = 175,
                             ClassId = 88,
                             Name = "Group 1",
-                            RoomId = 7
+                            RoomId = 8
                         },
                         new
                         {
                             GroupId = 176,
                             ClassId = 88,
                             Name = "Group 2",
-                            RoomId = 8
+                            RoomId = 9
                         },
                         new
                         {
                             GroupId = 177,
                             ClassId = 89,
                             Name = "Group 1",
-                            RoomId = 9
+                            RoomId = 10
                         },
                         new
                         {
                             GroupId = 178,
                             ClassId = 89,
                             Name = "Group 2",
-                            RoomId = 10
+                            RoomId = 11
                         },
                         new
                         {
                             GroupId = 179,
                             ClassId = 90,
                             Name = "Group 1",
-                            RoomId = 11
+                            RoomId = 12
                         },
                         new
                         {
                             GroupId = 180,
                             ClassId = 90,
                             Name = "Group 2",
-                            RoomId = 12
+                            RoomId = 1
                         });
                 });
 
@@ -22824,36 +22827,36 @@ namespace ExamPlanner_Backend.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9396bd49-fb79-4090-acca-2bffbea7740d",
-                            ConcurrencyStamp = "a1c17324-7fda-401c-954f-5ccd5457bd72",
+                            Id = "6d1e553d-8688-4a30-b9fb-1ab882c6fb05",
+                            ConcurrencyStamp = "25401ae5-c2b2-4fb2-9e88-308074db1f4d",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
-                            Id = "04515591-69ea-4eff-9a8e-0c27d4689a79",
-                            ConcurrencyStamp = "3efb48e6-1af7-4a01-b010-0b2eb1297b62",
+                            Id = "f692eb82-24a1-4400-9559-c2c0ef1c78e1",
+                            ConcurrencyStamp = "421b1ce2-8755-4f6f-8563-de80727e488e",
                             Name = "Director",
                             NormalizedName = "DIRECTOR"
                         },
                         new
                         {
-                            Id = "6833b036-626f-49cc-b1c3-627ec0d7b204",
-                            ConcurrencyStamp = "9e323118-1c97-4be2-b462-cb27a3a0509a",
+                            Id = "f30c7cbe-1f71-46dd-9618-6375d6d16ee2",
+                            ConcurrencyStamp = "d75b5d23-3f9a-4c71-ac98-9a16276dcdab",
                             Name = "StudentAffairsService",
                             NormalizedName = "STUDENTAFFAIRSSERVICE"
                         },
                         new
                         {
-                            Id = "1672a4a9-8f5e-4e32-bec4-e29d75b23ea0",
-                            ConcurrencyStamp = "dda16624-06ac-483b-b84b-c6aa76ac0912",
+                            Id = "8186cd24-7dee-4284-a5b4-c7490f7a406e",
+                            ConcurrencyStamp = "182b9767-489e-4a90-8b0e-c6c71d1298b6",
                             Name = "PrintingService",
                             NormalizedName = "PRINTINGSERVICE"
                         },
                         new
                         {
-                            Id = "b4c62341-a4cf-4daf-8bd5-34f1cb61781e",
-                            ConcurrencyStamp = "c7fd5524-8bad-46cc-81b6-4d33f19f19de",
+                            Id = "d97dc0a7-edb2-4ce3-9415-3b951b29dc42",
+                            ConcurrencyStamp = "a6a85f98-9154-4e5d-8ece-8ebad0cda5a5",
                             Name = "Teacher",
                             NormalizedName = "TEACHER"
                         });
