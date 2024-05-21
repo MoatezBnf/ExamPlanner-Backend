@@ -41,14 +41,20 @@ namespace ExamPlanner_Backend.Models
                 .HasForeignKey(sl => sl.LevelId);
 
             modelBuilder.Entity<Class>()
-                .HasOne(c => c.SpecialityLevel)
-                .WithMany(sl => sl.Classes)
-                .HasForeignKey(c => new { c.SpecialityId, c.LevelId });
+                .HasOne(c => c.Level)
+                .WithMany(l => l.Classes)
+                .HasForeignKey(c => c.LevelId);
 
             modelBuilder.Entity<Exam>()
-                .HasOne(e => e.SpecialityLevel)
-                .WithMany(sl => sl.Exams)
-                .HasForeignKey(e => new { e.SpecialityId, e.LevelId });
+                .HasOne(e => e.Schedule)
+                .WithMany(s => s.Exams)
+                .HasForeignKey(e => e.ScheduleId);
+
+            modelBuilder.Entity<Schedule>()
+                .HasOne(s => s.Group)
+                .WithMany(g => g.Schedules)
+                .HasForeignKey(s => s.GroupId);
+
         }
 
         private static void SeedRoles(ModelBuilder modelBuilder)
@@ -56,9 +62,7 @@ namespace ExamPlanner_Backend.Models
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Name = "SuperAdmin", NormalizedName = "SUPERADMIN", ConcurrencyStamp = Guid.NewGuid().ToString() },
                 new IdentityRole { Name = "Director", NormalizedName = "DIRECTOR", ConcurrencyStamp = Guid.NewGuid().ToString() },
-                new IdentityRole { Name = "StudentAffairsService", NormalizedName = "STUDENTAFFAIRSSERVICE", ConcurrencyStamp = Guid.NewGuid().ToString() },
-                new IdentityRole { Name = "PrintingService", NormalizedName = "PRINTINGSERVICE", ConcurrencyStamp = Guid.NewGuid().ToString() },
-                new IdentityRole { Name = "Teacher", NormalizedName = "TEACHER", ConcurrencyStamp = Guid.NewGuid().ToString() }
+                new IdentityRole { Name = "StudentAffairsService", NormalizedName = "STUDENTAFFAIRSSERVICE", ConcurrencyStamp = Guid.NewGuid().ToString() }
             );
         }
 
@@ -74,7 +78,7 @@ namespace ExamPlanner_Backend.Models
 
             // Seed Specialities
             modelBuilder.Entity<Speciality>().HasData(
-                new Speciality { SpecialityId = 1, Name = "Computer Science", DepartmentId = 1 },
+                new Speciality { SpecialityId = 1, Name = "Computer Science", DepartmentId = 2 },
                 new Speciality { SpecialityId = 2, Name = "Software Engineering", DepartmentId = 2 },
                 new Speciality { SpecialityId = 3, Name = "Data Science", DepartmentId = 2 },
                 new Speciality { SpecialityId = 4, Name = "Web Development", DepartmentId = 2 },
@@ -106,17 +110,14 @@ namespace ExamPlanner_Backend.Models
 
             // Seed Classes
             var classId = 1;
-            var classNames = new[] { "A", "B", "C" };
-            for (var specialityId = 1; specialityId <= 10; specialityId++)
+            var classNames = new[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+            for (var levelId = 1; levelId <= 3; levelId++)
             {
-                for (var levelId = 1; levelId <= 3; levelId++)
+                for (var i = 0; i < classNames.Length; i++)
                 {
-                    for (var i = 0; i < classNames.Length; i++)
-                    {
-                        modelBuilder.Entity<Class>().HasData(
-                            new Class { ClassId = classId++, Name = $"Class {classNames[i]}", SpecialityId = specialityId, LevelId = levelId }
-                        );
-                    }
+                    modelBuilder.Entity<Class>().HasData(
+                        new Class { ClassId = classId++, Name = $"Class {classNames[i]}", LevelId = levelId }
+                    );
                 }
             }
 
@@ -134,7 +135,7 @@ namespace ExamPlanner_Backend.Models
             // Seed Groups
             var groupId = 1;
             var groupNames = new[] { "Group 1", "Group 2" };
-            for (var classId1 = 1; classId1 <= 90; classId1++)
+            for (var classId1 = 1; classId1 <= 30; classId1++)
             {
                 for (var i = 0; i < groupNames.Length; i++)
                 {
@@ -145,11 +146,9 @@ namespace ExamPlanner_Backend.Models
                 }
             }
 
-
-
             // Seed Students
             var studentId = 1;
-            for (var groupId1 = 1; groupId1 <= 180; groupId1++)
+            for (var groupId1 = 1; groupId1 <= 60; groupId1++)
             {
                 for (var i = 1; i <= 15; i++)
                 {
@@ -159,22 +158,34 @@ namespace ExamPlanner_Backend.Models
                 }
             }
 
-            // Seed Exams
-            var examId = 1;
-            for (var specialityId = 1; specialityId <= 10; specialityId++)
+            // Seed Schedules
+            var scheduleId = 1;
+            var scholarYears = new[] { "2022-2023", "2023-2024" };
+            var semesters = new[] { "Semester1", "Semester2" };
+            for (var groupId1 = 1; groupId1 <= 60; groupId1++)
             {
-                for (var levelId = 1; levelId <= 3; levelId++)
+                for (var i = 0; i < scholarYears.Length; i++)
                 {
-                    for (var i = 1; i <= 5; i++)
+                    for (var j = 0; j < semesters.Length; j++)
                     {
-                        modelBuilder.Entity<Exam>().HasData(
-                            new Exam { ExamId = examId++, Name = $"Exam {examId - 1}", Date = DateTime.Now.AddDays(i), Duration = TimeSpan.FromHours(2), SpecialityId = specialityId, LevelId = levelId }
+                        modelBuilder.Entity<Schedule>().HasData(
+                            new Schedule { ScheduleId = scheduleId++, Name = $"Schedule {scheduleId - 1}", ScholarYear = scholarYears[i], Semester = semesters[j], Duration = TimeSpan.FromHours(3), GroupId = groupId1 }
                         );
                     }
                 }
             }
 
-
+            // Seed Exams
+            var examId = 1;
+            for (var scheduleId1 = 1; scheduleId1 <= 240; scheduleId1++)
+            {
+                for (var i = 1; i <= 5; i++)
+                {
+                    modelBuilder.Entity<Exam>().HasData(
+                        new Exam { ExamId = examId++, Name = $"Exam {examId - 1}", Date = DateTime.Now.AddDays(i), Duration = TimeSpan.FromHours(2), ScheduleId = scheduleId1 }
+                    );
+                }
+            }
         }
 
         public DbSet<UserModel> UserModel { get; set; } = default!;

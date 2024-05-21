@@ -9,9 +9,9 @@
 
         public Class? Class { get; set; }
         public Room? Room { get; set; }
-
         public ICollection<Student>? Students { get; set; }
-
+        public ICollection<Schedule>? Schedules { get; set; }
     }
+
 
 }

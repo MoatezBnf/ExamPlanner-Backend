@@ -5,5 +5,7 @@
         public int? LevelId { get; set; }
         public string? Name { get; set; }
         public ICollection<SpecialityLevel>? SpecialityLevels { get; set; }
+        public ICollection<Class>? Classes { get; set; }
+
     }
 }
