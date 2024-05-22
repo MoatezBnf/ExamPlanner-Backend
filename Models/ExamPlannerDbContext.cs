@@ -199,5 +199,6 @@ namespace ExamPlanner_Backend.Models
         public DbSet<Student> Students { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Exam> Exams { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
     }
 }
