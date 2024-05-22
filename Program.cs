@@ -39,6 +39,16 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+        builder.WithOrigins("http://localhost:3000")
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .AllowCredentials());
+});
+
+
 // Add DbContext
 builder.Services.AddDbContext<ExamPlannerDbContext>(options =>
 {
@@ -85,6 +95,10 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "ExamPlanner API v1");
     });
 }
+
+app.UseCors();
+
+app.UseHttpsRedirection();
 
 app.UseHttpsRedirection();
 
