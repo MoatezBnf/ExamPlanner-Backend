@@ -7,7 +7,7 @@ namespace ExamPlanner_Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "SuperAdmin,Director")]
     public class DepartmentController : ControllerBase
     {
         private readonly ExamPlannerDbContext _context;
