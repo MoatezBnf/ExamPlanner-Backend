@@ -21,14 +21,14 @@ namespace ExamPlanner_Backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Schedule>>> GetSchedules()
         {
-            return await _context.Schedules.ToListAsync();
+            return await _context.Schedules.Include(s => s.Group).ToListAsync();
         }
 
         // GET: api/schedule/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Schedule>> GetSchedule(int id)
         {
-            var schedule = await _context.Schedules.FindAsync(id);
+            var schedule = await _context.Schedules.Include(s => s.Group).FirstOrDefaultAsync(s => s.ScheduleId == id);
 
             if (schedule == null)
             {
@@ -40,12 +40,40 @@ namespace ExamPlanner_Backend.Controllers
 
         // POST: api/schedule
         [HttpPost]
-        public async Task<ActionResult<Schedule>> PostSchedule(Schedule schedule)
+        public async Task<ActionResult<Schedule>> PostSchedule(ScheduleInputModel input)
         {
-            _context.Schedules.Add(schedule);
-            await _context.SaveChangesAsync();
+            var groups = await _context.Groups
+        .Include(g => g.Class)
+        .Where(g => g.Class.LevelId == input.LevelId)
+        .ToListAsync();
+            foreach (var group in groups)
+            {
+                var schedule = new Schedule
+                {
+                    GroupId = group.GroupId,
+                    Group = group,
+                    ScholarYear = input.ScholarYear,
+                    Semester = input.Semester,
+                    Duration = input.Duration
+                };
 
-            return CreatedAtAction(nameof(GetSchedule), new { id = schedule.ScheduleId }, schedule);
+                _context.Schedules.Add(schedule);
+                await _context.SaveChangesAsync();
+                foreach (var examName in input.ExamNames)
+                {
+                    var exam = new Exam
+                    {
+                        Name = examName,
+                        Duration = input.ExamDuration,
+                        ScheduleId = schedule.ScheduleId
+                    };
+
+                    _context.Exams.Add(exam);
+                }
+
+                await _context.SaveChangesAsync();
+            }
+            return Ok();
         }
 
         // PUT: api/schedule/{id}
